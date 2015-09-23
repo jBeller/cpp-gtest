@@ -19,7 +19,12 @@ bool Rando::shouldWorry(bool childASmile, bool childBSmile, bool childCSmile)
 **/
 bool Rando::isDivisibleBy(int first, int second)
 {
-	return false;
+	if (!second)                 // Cannot divide by 0
+		return false;
+	else if (!(first % second))
+		return true;
+	else
+	    return false;
 }
 
 /**
@@ -29,7 +34,10 @@ bool Rando::isDivisibleBy(int first, int second)
 **/
 bool Rando::isPrime(int num)
 {
-	return true;
+	if (num % 2)
+		return true;
+	else
+		return false;
 }
 
 /**
@@ -38,5 +46,8 @@ bool Rando::isPrime(int num)
 **/
 int Rando::nearestToZero(int a, int b)
 {
-	return 0;
+	if (a < b || a == b)
+		return a;
+	else
+		return b;
 }
